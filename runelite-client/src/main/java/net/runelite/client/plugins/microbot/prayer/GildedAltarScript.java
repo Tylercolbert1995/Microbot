@@ -157,7 +157,9 @@ public class GildedAltarScript extends Script {
             } else {
                var Rs2Npc.interact(1614, "Use");
                if (!attempt) {
-                   Rs2Player.waitForWalking();
+                   Rs2Npc.interact(1614);
+               }
+               Rs2Player.waitForWalking();
             }
         } else if (Microbot.getClient().getWidget(14352385) != null) {
             Rs2Keyboard.keyPress('3');
