@@ -155,8 +155,9 @@ public class GildedAltarScript extends Script {
             if (!Rs2Inventory.isItemSelected()) {
                 Rs2Inventory.use("bones");
             } else {
-                Rs2Npc.interact("Phials", "Use");
-                Rs2Player.waitForWalking();
+               var Rs2Npc.interact(1614, "Use");
+               if (!attempt) {
+                   Rs2Player.waitForWalking();
             }
         } else if (Microbot.getClient().getWidget(14352385) != null) {
             Rs2Keyboard.keyPress('3');
